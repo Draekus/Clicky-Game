@@ -30,7 +30,7 @@
         "no-mixed-spaces-and-tabs": "error",
         "default-case": "error",
         "no-fallthrough": "error",
-        "no-unused-vars": "off",
+        "no-unused-vars": "warn",
         "no-use-before-define": "error",
         "no-redeclare": "error",
         "camelcase": "error",
