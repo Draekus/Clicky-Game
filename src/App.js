@@ -3,7 +3,6 @@ import "./App.css";
 import Nav from "./components/Nav";
 import images from "./images";
 import CardWrapper from "./components/CardWrapper";
-import SimpleModalWrapped from "./components/SimpleModalWrapped";
 
 class App extends Component {
   state = {
@@ -62,7 +61,6 @@ class App extends Component {
           images={this.state.images}
           clickHandler={this.clickHandler}
         />
-        <SimpleModalWrapped ref="modal" />
       </div>
     );
   }
