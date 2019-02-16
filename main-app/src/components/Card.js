@@ -1,36 +1,30 @@
-import React, { Component } from "react";
-import images from "../images";
+import React from "react";
+import Styled from "styled-components";
 
-class Card extends Component {
-  state = {
-    images: images,
-  };
+const CardDiv = Styled.div`
+  width: 250px;
+  height: 250px;
+`;
 
-  buildCards = () => {
-    const cardVar = images.map((image, index) => (
-      <div>
-        <div className="row">
-          <div className="col s12 m7">
-            <div className="card">
-              <div className="card-image">
-                <img src={image.url} alt={image.alt} />
-              </div>
-            </div>
-          </div>
+const Image = Styled.img`
+  width: 250px;
+  height: 250px;
+`;
+const Card = props => {
+  return (
+    <div>
+      <CardDiv className="card">
+        <div className="card-image">
+          <Image
+            src={props.url}
+            alt={props.alt}
+            clicked={props.clicked}
+            onClick={() => props.clickHandler(props.id)}
+          />
         </div>
-      </div>
-    ));
-
-    return (
-      <div>
-        {cardVar}
-      </div>
-    )
-  };
-
-  render() {
-    return <div>{this.buildCards()}</div>;
-  }
-}
+      </CardDiv>
+    </div>
+  );
+};
 
 export default Card;
